@@ -1,0 +1,118 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+@use "../utils/breakpoints" as *;
+
+
+.home__wrap{
+  @include flexDisplay($direction:column,$gap:0rem);
+  // border:2px solid red;
+}
+.home__container {
+  background-color: $black;
+  @include flexDisplay($direction: column);
+  justify-content: center;
+  align-items: center;
+  h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    opacity: 0;
+  }
+  p,
+  small {
+    color: $light-grey;
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+    opacity: 0;
+  }
+  p{
+    margin-bottom:3rem;
+  }
+
+  .image {
+    img {
+      width: 100%;
+      object-fit: cover;
+      animation-name: glitch;
+          animation-timing-function: linear;
+          animation-duration: 1s;
+          animation-delay: 1.3s;
+          animation-fill-mode: forwards;
+          opacity: 0;
+    }
+  }
+
+  @include md {
+    @include flexDisplay($direction: row);
+    align-items: center;
+    .content {
+      width: 50%;
+    }
+    h1 {
+      font-size: $font-size1;
+      margin-block: 1rem;
+    }
+    p {
+      font-size: $font-size2;
+      margin-bottom:4rem;
+     
+    }
+    .image {
+      width: 50%;
+      img {
+        width: 100%;
+        object-fit: cover;
+        
+      }
+    }
+  }
+  padding-bottom: 8rem;
+  color: $text-color;
+}
+
+
+
+.content {
+  text-align: center;
+}
+
+.button{
+  animation: appear 2s forwards linear ;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+@keyframes glitch {
+  from {
+    opacity: 0;
+  }
+  30% {
+    opacity: 40%;
+  }
+
+  60% {
+    opacity: 20%;
+  }
+  70%{
+    opacity: 40%;
+  }
+  80%{
+    opacity: 30%;
+  }
+  to {
+    opacity: 100%;
+  }
+}

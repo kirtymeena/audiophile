@@ -1,0 +1,29 @@
+@use "../utils/breakpoints" as *;
+
+.container{
+    padding-inline: 2rem;
+    padding-block:2rem;
+    @include md{
+    padding-inline:4rem;
+    
+    }
+}
+.container-wrap{
+    padding-inline: 2rem;
+    padding-top: 8rem;
+    @include md{
+        padding-inline:4rem
+    }
+}
+.uppercase{
+    text-transform: uppercase;
+}
+.letter-spacing{
+    letter-spacing: 1.2px;
+}
+.letter-spacing2{
+    letter-spacing: 0.4rem;
+}
+.line-height{
+    line-height: 1.6rem;
+}

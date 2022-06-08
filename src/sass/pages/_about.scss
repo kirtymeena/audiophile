@@ -1,0 +1,60 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+@use "../utils/breakpoints" as *;
+
+
+.flex__container{
+    @include flexDisplay($direction:column,);
+    text-align: center;
+    
+    h1{
+        color:$stone;
+        margin-bottom:2rem;
+    }
+    span{
+        color:$orange
+    }
+    p{
+        color:$grey
+    }
+
+    .gear-lg,.gear-md{
+        display: none;
+    }
+    .gear-sm{
+        object-fit: cover;
+        width:100%;
+    }
+    @include md{
+        text-align: center;
+        .gear-lg,.gear-sm{
+            display: none;
+        }
+        .gear-md{
+            display: block;
+            width:100%
+        }
+    }
+    @include lg{
+        @include flexDisplay($direction:row,$gap:9rem);
+        text-align: left;
+        align-items: center;
+        h1{font-size:$font-size1;}
+        p{font-size:$font-size2}
+        .gear-md,.gear-sm{
+            display: none;
+        }
+        .gear-lg{
+            display: block;
+            width:100%;
+            object-fit:cover
+        }
+        .flex__content{
+            width:50%;
+        }
+          
+        
+
+    }
+}
+

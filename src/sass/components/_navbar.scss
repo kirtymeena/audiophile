@@ -1,0 +1,118 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+@use "../utils/breakpoints" as *;
+
+.navbar{
+    background-color: $black;
+    color:$text-color;
+    position: fixed;
+    width:100%;
+    font-weight: 500;
+    z-index:100
+
+}
+.nav__logo{
+    opacity: 80%;
+}
+nav{
+    @include flexDisplay($direction:row,$gap:3rem);
+    justify-content: space-between;
+    align-items: center;
+    
+    .close{
+        display: none;
+       
+        
+
+    }
+    .open{
+        display: block;
+        font-size:12px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        @include md{
+            font-size:18px
+        }
+        @include flexDisplay();
+        justify-content: center;
+        align-items: center;
+        width:100%;
+        background-color: $black ;
+        position: absolute;
+        left:0;
+        right:0;
+        padding-block:3rem;
+        height:20px;
+        animation:slideTop 0.5s forwards;
+        visibility: visible !important;
+
+        .link{
+            text-decoration: none;
+        }
+    }
+    svg{
+        cursor:pointer
+    }
+}
+
+
+
+
+// do not display md and lg navlinks in sm
+.nav__links-md{
+    display: none;
+}
+
+
+@include md{
+    .nav__links-md{
+        display: block;
+        @include lg{
+            @include flexDisplay($gap:3rem)
+        }
+        @include flexDisplay($gap:2rem);    
+        align-items:center
+    }
+    
+    .link:after{
+        display: block;
+        content:'';
+        border-bottom:solid 3px #d87d4a;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+
+    }
+    
+    .link:hover::after{
+        transform: scaleX(1);
+    }
+
+}
+
+.link{
+    text-decoration: none;
+    color:$text-color
+}
+
+
+// do not display navlinks of sm in md and lg
+@include md{
+    .nav__links-sm{
+        display: none;
+    }
+}
+
+
+@keyframes slideTop{
+    from{
+        transform: translateY(-10px);
+        
+    }
+   
+    to{
+        transform: translateY(30px);
+    }
+}
+
+
+
+

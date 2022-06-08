@@ -1,0 +1,32 @@
+@use "../utils/mixin" as *;
+@use "../utils/variables" as *;
+@use "../utils/breakpoints" as *;
+
+.container-wrap{
+    @include md{
+    @include flexDisplay($gap:1rem);
+    }
+    justify-content: center;
+    // align-items: center;
+    font-size: $font-size2;
+    
+}
+
+.home__content{
+    border:2px solid blue;
+    padding-inline:2rem;
+    padding-block:5rem;
+    font-weight:700;
+    background-color: $light-blue
+}
+.category__image{
+    @include flexDisplay($direction:column,$gap:2rem);
+
+}
+// .categories {
+//        position: absolute;
+//        top:3rem;
+//        transform: scale(0.3);
+//        border:2px solid green
+
+// }

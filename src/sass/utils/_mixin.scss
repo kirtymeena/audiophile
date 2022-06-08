@@ -1,0 +1,6 @@
+@mixin flexDisplay($direction:row,$gap:1rem){
+    display: flex;
+    flex-direction: $direction;
+    gap:$gap
+
+}
