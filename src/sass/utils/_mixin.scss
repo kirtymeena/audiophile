@@ -1,6 +1,11 @@
-@mixin flexDisplay($direction:row,$gap:1rem){
-    display: flex;
-    flex-direction: $direction;
-    gap:$gap
+@use "../utils/variables" as *;
 
+@mixin flexDisplay($direction: row, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
+@mixin btn-bg-color($color:$orange) {
+  background-color: $color;
 }

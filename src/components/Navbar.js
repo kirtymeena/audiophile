@@ -22,13 +22,13 @@ const Navbar = () => {
                <Link to="/" className="link"><p >Home</p></Link>
             </div>
             <div className="nav__link uppercase">
-              <Link to="/" className="link"><p >Headphones</p></Link>
+              <Link to="/headphones" className="link"><p >Headphones</p></Link>
             </div>
             <div className="nav__link uppercase">
-              <Link to="/" className="link"><p >Speakers</p></Link>
+              <Link to="/speakers" className="link"><p >Speakers</p></Link>
             </div>
             <div className="nav__link uppercase">
-              <Link to="/" className="link"><p >earphones</p></Link>
+              <Link to="/earphones" className="link"><p >earphones</p></Link>
             </div>
             <div className="nav__icon">
               <div className="cart">
@@ -67,13 +67,13 @@ const Navbar = () => {
                 <Link to="/" className="link"><p >Home</p></Link>
               </div>
               <div className="nav__link-sm uppercase">
-                <Link to="/" className="link"><p >Headphones</p></Link>
+                <Link to="/headphones" className="link"><p >Headphones</p></Link>
               </div>
               <div className="nav__link-sm uppercase">
-                <Link to="/" className="link"><p >Speakers</p></Link>
+                <Link to="/speakers" className="link"><p >Speakers</p></Link>
               </div>
               <div className="nav__link-sm uppercase">
-                <Link to="/" className="link"><p >earphones</p></Link>
+                <Link to="/earphones" className="link"><p >earphones</p></Link>
               </div>
             </div>
           </div>

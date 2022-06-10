@@ -14,22 +14,26 @@ const Categories = () => {
         })
     },[])
   return (
-    <div className='container-wrap'>
+    <div className='container-wrap category__wrap'>
+       <div>
+           <h1 className='heading'>Category</h1>
+       </div>
+       <div className='category__img__outer'>
         {category!==undefined && category.map(cat=>
-        <div key={cat.id} className='category__card'>
+      
            
-           <div className='category__image'>
-              {/* <div>{cat.category.toLowerCase()==="headphones"&& <img src={headphone} className="categories" alt="headphone"/>}</div>
+           <div key={cat.id} className='category__image'>
+              <div>{cat.category.toLowerCase()==="headphones"&& <img src={headphone} className="categories" alt="headphone"/>}</div>
+             
               <div>{cat.category.toLowerCase()==="speakers"&& <img src={speaker} className="categories" alt="speakers"/>}</div>
-              <div>{cat.category.toLowerCase()==="earphones"&& <img src={earphone} className="categories" alt="earphone"/>}</div> */}
+              <div>{cat.category.toLowerCase()==="earphones"&& <img src={earphone} className="categories" alt="earphone"/>}</div>
            </div>
-           <div className='home__content'>
-           <div className='category__content letter-spacing'>{cat.category}</div>
-           </div>
-          
-        </div>
+
+      
+        
 
         )}
+        </div>
     </div>
   )
 }

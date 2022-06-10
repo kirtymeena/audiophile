@@ -2,9 +2,8 @@
 @use "../utils/variables" as *;
 @use "../utils/breakpoints" as *;
 
-
-.home__wrap{
-  @include flexDisplay($direction:column,$gap:0rem);
+.home__wrap {
+  @include flexDisplay($direction: column, $gap: 0rem);
   // border:2px solid red;
 }
 .home__container {
@@ -31,8 +30,8 @@
     animation-timing-function: linear;
     opacity: 0;
   }
-  p{
-    margin-bottom:3rem;
+  p {
+    margin-bottom: 3rem;
   }
 
   .image {
@@ -40,11 +39,11 @@
       width: 100%;
       object-fit: cover;
       animation-name: glitch;
-          animation-timing-function: linear;
-          animation-duration: 1s;
-          animation-delay: 1.3s;
-          animation-fill-mode: forwards;
-          opacity: 0;
+      animation-timing-function: linear;
+      animation-duration: 1s;
+      animation-delay: 1.3s;
+      animation-fill-mode: forwards;
+      opacity: 0;
     }
   }
 
@@ -60,15 +59,13 @@
     }
     p {
       font-size: $font-size2;
-      margin-bottom:4rem;
-     
+      margin-bottom: 4rem;
     }
     .image {
       width: 50%;
       img {
         width: 100%;
         object-fit: cover;
-        
       }
     }
   }
@@ -76,14 +73,12 @@
   color: $text-color;
 }
 
-
-
 .content {
   text-align: center;
 }
 
-.button{
-  animation: appear 2s forwards linear ;
+.button {
+  animation: appear 2s forwards linear;
 }
 
 @keyframes appear {
@@ -106,13 +101,15 @@
   60% {
     opacity: 20%;
   }
-  70%{
+  70% {
     opacity: 40%;
   }
-  80%{
+  80% {
     opacity: 30%;
   }
   to {
     opacity: 100%;
   }
 }
+
+// additional product card

@@ -1,28 +1,50 @@
 @use "../utils/mixin" as *;
 @use "../utils/variables" as *;
 
+.btn {
+  border: none;
+  // background:none;
+  color: $text-color;
+  
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.5s;
+  border-radius: 12px;
+
+span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+}
+
 .btn{
-    border:none;
-    background:none;
-    color:$text-color;
-    font-weight: 400;
-    font-size:16px;
-    cursor:pointer
-
+    span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
 }
-
-.btn-full{
-    background-color: $orange;
-    padding-inline:2rem;
-    padding-block:0.8rem ;
-    text-align: center;
-    transition: ease-out 0.5s;
-
+.btn:hover span{
     
-
+        padding-right: 25px;
+        
 }
+.btn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
 
-.btn-full:hover{
-    background-color: rgb(223, 130, 24)
+.btn-full {
+  @include btn-bg-color();
+  padding-inline: 2rem;
+  padding-block: 0.8rem;
+  text-align: center;
+  transition: ease-out 0.5s;
 }
 

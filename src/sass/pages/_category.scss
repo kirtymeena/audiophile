@@ -2,31 +2,34 @@
 @use "../utils/variables" as *;
 @use "../utils/breakpoints" as *;
 
-.container-wrap{
-    @include md{
-    @include flexDisplay($gap:1rem);
-    }
-    justify-content: center;
-    // align-items: center;
-    font-size: $font-size2;
-    
+.category__wrap {
+  @include flexDisplay($direction: column);
+  justify-content: center;
+  font-size: $font-size2;
+  text-align: center;
+}
+.category__img__outer {
+  @include flexDisplay($direction: column);
+  @include md {
+    @include flexDisplay();
+  }
 }
 
-.home__content{
-    border:2px solid blue;
-    padding-inline:2rem;
-    padding-block:5rem;
-    font-weight:700;
-    background-color: $light-blue
-}
-.category__image{
-    @include flexDisplay($direction:column,$gap:2rem);
+.categories {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1;
 
+  transform: scale(0.7);
+  transition: 0.5s linear;
+  background-color: #f1f1f1;
+  border: 4px solid rgb(228, 190, 134);
+  position: relative;
 }
-// .categories {
-//        position: absolute;
-//        top:3rem;
-//        transform: scale(0.3);
-//        border:2px solid green
+.categories:hover {
+  border: 4px solid rgb(135, 177, 224);
+}
 
-// }
+.heading {
+  color: $stone;
+}
